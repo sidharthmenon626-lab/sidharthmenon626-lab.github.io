@@ -22,16 +22,17 @@ export const Hero: React.FC<HeroProps> = ({ perspective, setPerspective }) => {
         <p className="hero-subtitle">
           {perspective === 'commercial' ? (
             <>
-              <strong>Commercial Focus:</strong> Specializing in executive decision support, 
-              revenue retention modeling, customer lifetime value optimization, and conversion funnel economics. 
-              Delivered verified business outcomes across 6 systems—including <strong>$118k+ in preserved ARR</strong> and 
-              diagnosing an <strong>80% revenue volume decline</strong>.
+              <strong>Commercial Focus Active:</strong> The entire website is currently tuned to 
+              <strong> financial ROI, revenue retention modeling, and executive strategy</strong>. 
+              Showing how data analysis preserved <strong>$118k+ in ARR</strong>, diagnosed an <strong>80% revenue volume decline</strong>, 
+              and recovered lost transaction GMV across 6 business-critical systems.
             </>
           ) : (
             <>
-              <strong>Technical Rigor:</strong> Expert in audited SQL CTE pipelines, 
-              zero-leakage temporal cross-validation, two-proportion hypothesis testing, 
-              and Kimball star schema dimensional modeling across <strong>1.15M+ records</strong> and <strong>103 passing dbt contract tests</strong>.
+              <strong>Technical Rigor Active:</strong> The entire website is currently tuned to 
+              <strong> engineering depth, statistical methods, and SQL architecture</strong>. 
+              Highlighting <strong>audited CTE pipelines, 103 dbt schema contracts, Kimball SCD Type II modeling</strong>, 
+              and <strong>zero-leakage temporal cross-validation</strong> across 1.15M+ records.
             </>
           )}
         </p>
@@ -48,9 +49,9 @@ export const Hero: React.FC<HeroProps> = ({ perspective, setPerspective }) => {
         </div>
 
         {/* Perspective Switcher */}
-        <div>
+        <div style={{ marginTop: '16px' }}>
           <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
-            Tailor Your Reading Perspective:
+            Switch Entire Site Perspective:
           </div>
           <div className="perspective-bar">
             <button
@@ -71,6 +72,9 @@ export const Hero: React.FC<HeroProps> = ({ perspective, setPerspective }) => {
                 <span>Technical & Analytical Rigor</span>
               </span>
             </button>
+          </div>
+          <div style={{ fontSize: '0.75rem', color: perspective === 'commercial' ? '#fbbf24' : '#2dd4bf', marginTop: '8px', fontWeight: 700 }}>
+            ⚡ All 6 metric cards, project summaries, and data callouts below dynamically adapt to this mode
           </div>
         </div>
       </div>

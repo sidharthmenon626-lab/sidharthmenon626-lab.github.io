@@ -18,15 +18,14 @@ export function App() {
     ? PROJECTS_DATA
     : PROJECTS_DATA.filter((p) => p.domain === activeFilter);
 
-  // Assign asymmetric bento spans when all projects are shown
   const getBentoSpan = (index: number, isFiltered: boolean) => {
     if (isFiltered) return 'bento-card-span-6';
-    if (index === 0) return 'bento-card-span-7'; // Enterprise Data Platform (Major anchor)
-    if (index === 1) return 'bento-card-span-5'; // Churn Prediction
-    if (index === 2) return 'bento-card-span-5'; // Demand Forecasting
-    if (index === 3) return 'bento-card-span-7'; // PulseFlow A/B Testing
-    if (index === 4) return 'bento-card-span-6'; // E-Commerce 10 SQL
-    if (index === 5) return 'bento-card-span-6'; // B2C vs B2B 10 SQL
+    if (index === 0) return 'bento-card-span-7';
+    if (index === 1) return 'bento-card-span-5';
+    if (index === 2) return 'bento-card-span-5';
+    if (index === 3) return 'bento-card-span-7';
+    if (index === 4) return 'bento-card-span-6';
+    if (index === 5) return 'bento-card-span-6';
     return 'bento-card-span-6';
   };
 
@@ -36,7 +35,7 @@ export function App() {
       
       <main>
         <Hero perspective={perspective} setPerspective={setPerspective} />
-        <MetricTicker />
+        <MetricTicker perspective={perspective} />
 
         <section id="projects" className="projects-section">
           <div className="container">
@@ -44,10 +43,15 @@ export function App() {
               <span className="badge badge-gold" style={{ marginBottom: '12px' }}>
                 Executive Case Studies
               </span>
-              <h2 className="section-title">Production Analytics & Commercial Systems</h2>
+              <h2 className="section-title">
+                {perspective === 'commercial' 
+                  ? 'Commercial Revenue & Growth Systems'
+                  : 'Audited Analytics & Technical Infrastructure'}
+              </h2>
               <p className="section-desc">
-                Six full-lifecycle case studies demonstrating commercial revenue optimization, 
-                experimentation rigor, SQL warehouse intelligence, and predictive modeling.
+                {perspective === 'commercial'
+                  ? 'Six commercial case studies demonstrating quantified revenue preservation, whale customer economics, and executive rollout decisions.'
+                  : 'Six production systems evaluated for zero-leakage cross-validation, SCD Type II dimensional modeling, and statistical hypothesis testing.'}
               </p>
             </div>
 
