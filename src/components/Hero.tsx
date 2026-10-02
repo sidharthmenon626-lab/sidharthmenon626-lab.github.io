@@ -8,51 +8,46 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ perspective, setPerspective }) => {
   return (
-    <section id="hero" className="hero-section">
+    <section id="hero" className="hero-section" style={{ padding: '70px 0 45px' }}>
       <div className="container">
         <div className="hero-pill-track">
           <span className="pulse-amber"></span>
-          <span>Open to Business / Data Analyst Roles · SQL & Analytics Stack</span>
+          <span>Open to Business / Data Analyst Roles</span>
         </div>
 
-        <h1 className="hero-title">
-          Transforming Complex Data into <span className="gradient-gold">Strategic Business Decisions</span> & Measurable Revenue Growth
+        <h1 className="hero-title" style={{ maxWidth: '850px', marginBottom: '18px' }}>
+          Turning Data into <span className="gradient-gold">Revenue Impact</span> & Strategic Decisions
         </h1>
 
-        <p className="hero-subtitle">
+        <p className="hero-subtitle" style={{ maxWidth: '680px', marginBottom: '28px', fontSize: '1.1rem' }}>
           {perspective === 'commercial' ? (
             <>
-              <strong>Commercial Focus Active:</strong> The entire website is currently tuned to 
-              <strong> financial ROI, revenue retention modeling, and executive strategy</strong>. 
-              Showing how data analysis preserved <strong>$118k+ in ARR</strong>, diagnosed an <strong>80% revenue volume decline</strong>, 
-              and recovered lost transaction GMV across 6 business-critical systems.
+              <strong>Commercial Focus:</strong> Specializing in revenue intelligence, churn retention, 
+              and product experimentation. Delivered <strong>$118k+ in ARR preservation</strong> and 
+              diagnosed an <strong>80% revenue decline</strong> across 6 audited systems.
             </>
           ) : (
             <>
-              <strong>Technical Rigor Active:</strong> The entire website is currently tuned to 
-              <strong> engineering depth, statistical methods, and SQL architecture</strong>. 
-              Highlighting <strong>audited CTE pipelines, 103 dbt schema contracts, Kimball SCD Type II modeling</strong>, 
-              and <strong>zero-leakage temporal cross-validation</strong> across 1.15M+ records.
+              <strong>Technical Rigor:</strong> Expert in audited SQL CTE pipelines, 
+              Kimball star schemas (<strong>103 dbt tests</strong>), and zero-leakage machine learning 
+              across <strong>1.15M+ records</strong>.
             </>
           )}
         </p>
 
-        <div className="hero-cta">
+        <div className="hero-cta" style={{ marginBottom: '28px' }}>
           <a href="#projects" className="btn btn-gold">
-            <span>Explore 6 Audited Systems</span>
+            <span>View 6 Case Studies</span>
             <ArrowDown size={16} />
           </a>
           <a href="#interactive-lab" className="btn btn-teal">
             <Sparkles size={16} />
-            <span>Launch Simulation Lab</span>
+            <span>Interactive Simulators</span>
           </a>
         </div>
 
         {/* Perspective Switcher */}
-        <div style={{ marginTop: '16px' }}>
-          <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
-            Switch Entire Site Perspective:
-          </div>
+        <div>
           <div className="perspective-bar">
             <button
               onClick={() => setPerspective('commercial')}
@@ -60,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ perspective, setPerspective }) => {
             >
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                 <TrendingUp size={14} />
-                <span>Commercial & Revenue Impact</span>
+                <span>Commercial Perspective</span>
               </span>
             </button>
             <button
@@ -69,12 +64,9 @@ export const Hero: React.FC<HeroProps> = ({ perspective, setPerspective }) => {
             >
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                 <Cpu size={14} />
-                <span>Technical & Analytical Rigor</span>
+                <span>Technical Perspective</span>
               </span>
             </button>
-          </div>
-          <div style={{ fontSize: '0.75rem', color: perspective === 'commercial' ? '#fbbf24' : '#2dd4bf', marginTop: '8px', fontWeight: 700 }}>
-            ⚡ All 6 metric cards, project summaries, and data callouts below dynamically adapt to this mode
           </div>
         </div>
       </div>

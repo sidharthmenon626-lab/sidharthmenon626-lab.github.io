@@ -4,47 +4,46 @@ import { ShieldCheck, GitBranch, Binary, BarChart3 } from 'lucide-react';
 export const PhilosophySection: React.FC = () => {
   const principles = [
     {
-      icon: <ShieldCheck size={24} color="#10b981" />,
+      icon: <ShieldCheck size={22} color="#10b981" />,
       title: 'Anti-Leakage First',
-      description: 'Temporal data leakage is the silent killer of ML models. Every pipeline I build enforces strict timestamp cutoffs, forward-chaining cross-validation, and segregated feature store calculations.'
+      description: 'Strict timestamp cutoff boundaries and expanding-window CV to eliminate lookahead bias.'
     },
     {
-      icon: <GitBranch size={24} color="#f59e0b" />,
-      title: 'CTEs Over Nested Subqueries',
-      description: 'Audited, readable, and defensive SQL. I adhere to a strict house style: modular CTE chains, explicit NULLIF on every denominator, and self-validating sanity assertions.'
+      icon: <GitBranch size={22} color="#f59e0b" />,
+      title: 'Audited CTE Pipelines',
+      description: 'Modular, readable SQL chains with explicit NULLIF denominators and self-validating sanity assertions.'
     },
     {
-      icon: <BarChart3 size={24} color="#06b6d4" />,
-      title: 'Hypothesis-Driven Experimentation',
-      description: 'Aggregate lift numbers can be fatal illusions. I audit every experiment for Sample Ratio Mismatch (SRM), temporal novelty decay, and platform-level Simpson’s Paradoxes before recommending rollout.'
+      icon: <BarChart3 size={22} color="#06b6d4" />,
+      title: 'Experimentation Rigor',
+      description: 'Pre-flight checks for Sample Ratio Mismatch (SRM), temporal novelty decay, and Simpson’s Paradoxes.'
     },
     {
-      icon: <Binary size={24} color="#a855f7" />,
-      title: 'Kimball Dimensional Rigor',
-      description: 'Data platforms must be built for the enterprise. Star schemas with Slowly Changing Dimensions (SCD Type II) preserve historical state mutations and ensure zero financial ambiguity.'
+      icon: <Binary size={22} color="#a855f7" />,
+      title: 'Kimball Dimensional Modeling',
+      description: 'Star schemas with SCD Type II historical tracking to preserve state changes without data loss.'
     }
   ];
 
   return (
-    <section id="philosophy" style={{ padding: '80px 0' }}>
+    <section id="philosophy" style={{ padding: '60px 0' }}>
       <div className="container">
-        <div className="section-header">
-          <span className="badge badge-eng" style={{ marginBottom: '12px' }}>
-            Engineering Standards
+        <div className="section-header" style={{ marginBottom: '28px' }}>
+          <span className="badge badge-eng" style={{ marginBottom: '10px' }}>
+            Standards
           </span>
-          <h2 className="section-title">Analytical Methodology & Standards</h2>
-          <p className="section-desc">
-            High-impact business analysis requires rigorous analytical and statistical standards. Here are the 
-            four principles that guide every model, query, and pipeline I write.
+          <h2 className="section-title" style={{ fontSize: '1.75rem' }}>Analytical Methodology</h2>
+          <p className="section-desc" style={{ fontSize: '0.9rem' }}>
+            Four engineering principles guiding every model, query, and pipeline I build.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
           {principles.map((p, idx) => (
-            <div key={idx} className="glass-panel" style={{ padding: '24px' }}>
-              <div style={{ marginBottom: '16px' }}>{p.icon}</div>
-              <h3 style={{ fontSize: '1.15rem', marginBottom: '8px' }}>{p.title}</h3>
-              <p style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>{p.description}</p>
+            <div key={idx} className="glass-panel" style={{ padding: '20px' }}>
+              <div style={{ marginBottom: '12px' }}>{p.icon}</div>
+              <h3 style={{ fontSize: '1.05rem', marginBottom: '6px' }}>{p.title}</h3>
+              <p style={{ fontSize: '0.825rem', lineHeight: 1.5 }}>{p.description}</p>
             </div>
           ))}
         </div>

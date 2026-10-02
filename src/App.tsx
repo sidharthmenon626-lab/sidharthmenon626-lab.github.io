@@ -37,49 +37,44 @@ export function App() {
         <Hero perspective={perspective} setPerspective={setPerspective} />
         <MetricTicker perspective={perspective} />
 
-        <section id="projects" className="projects-section">
+        <section id="projects" className="projects-section" style={{ padding: '30px 0 60px' }}>
           <div className="container">
-            <div className="section-header">
-              <span className="badge badge-gold" style={{ marginBottom: '12px' }}>
-                Executive Case Studies
+            <div className="section-header" style={{ marginBottom: '28px' }}>
+              <span className="badge badge-gold" style={{ marginBottom: '10px' }}>
+                Case Studies
               </span>
-              <h2 className="section-title">
+              <h2 className="section-title" style={{ fontSize: '1.85rem' }}>
                 {perspective === 'commercial' 
                   ? 'Commercial Revenue & Growth Systems'
                   : 'Audited Analytics & Technical Infrastructure'}
               </h2>
-              <p className="section-desc">
-                {perspective === 'commercial'
-                  ? 'Six commercial case studies demonstrating quantified revenue preservation, whale customer economics, and executive rollout decisions.'
-                  : 'Six production systems evaluated for zero-leakage cross-validation, SCD Type II dimensional modeling, and statistical hypothesis testing.'}
-              </p>
             </div>
 
             {/* Filter Pills */}
-            <div className="filter-bar">
+            <div className="filter-bar" style={{ marginBottom: '32px' }}>
               <button
                 className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('all')}
               >
-                All Systems (6)
+                All (6)
               </button>
               <button
                 className={`filter-btn ${activeFilter === 'sql-strategy' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('sql-strategy')}
               >
-                Business SQL & Strategy (2)
+                Business SQL (2)
               </button>
               <button
                 className={`filter-btn ${activeFilter === 'product-analytics' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('product-analytics')}
               >
-                Product Experimentation (1)
+                Experimentation (1)
               </button>
               <button
                 className={`filter-btn ${activeFilter === 'machine-learning' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('machine-learning')}
               >
-                Predictive Analytics (2)
+                Predictive ML (2)
               </button>
               <button
                 className={`filter-btn ${activeFilter === 'data-eng' ? 'active' : ''}`}

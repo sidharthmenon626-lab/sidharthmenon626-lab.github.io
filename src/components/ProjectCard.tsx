@@ -16,96 +16,83 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
       case 'sql-business-insights':
         return perspective === 'commercial'
           ? {
-              tagline: 'Diagnosed an 80% Revenue Volume Slide & Isolated 88% Whale Revenue Concentration',
-              summary: 'Uncovered that an 80% revenue crash was driven by customer acquisition volume collapse while AOV held steady at ₹7k-8k. Revealed that top 40% spenders generate 88% of all revenue, recommending high-touch VIP retention.',
-              stat: '$120k+ Whales = 88% Revenue',
-              statSub: 'Commercial Impact'
+              summary: 'Diagnosed an 80% revenue volume collapse while AOV held flat. Discovered that the top 40% of customers generate 88% of total revenue.',
+              stat: 'Whales = 88% Rev',
+              statSub: 'LTV Deciles'
             }
           : {
-              tagline: 'Audited CTE Pipelines, Window Trend Functions & Sanitized NULLIF Denominators',
-              summary: 'Modular SQL pipelines built on strict house style: CTE chains over subqueries, self-validating sanity assertions, and decile revenue concentration window aggregations against Postgres ecom warehouse.',
-              stat: '10 Production CTE Queries',
+              summary: 'Production SQL CTE pipelines with window trend rankings, sanitized NULLIF denominators, and automated sanity assertions.',
+              stat: '10 Audited CTEs',
               statSub: 'SQL Architecture'
             };
 
       case 'customer-churn-prediction-sql':
         return perspective === 'commercial'
           ? {
-              tagline: 'Rescuing $118,500+ in Lost SaaS Annual Recurring Revenue via Algorithmic Early Warnings',
-              summary: 'Replaced reactive exit-interview churn post-mortems with 30-day algorithmic early warnings, intercepting 221 at-risk enterprise accounts and saving $118k+ in ARR through prioritized CS intervention playbooks.',
-              stat: '+$118,500 Preserved ARR',
-              statSub: 'Net Retained Revenue'
+              summary: 'Algorithmic early-warning system intercepting 221 at-risk accounts, preserving $118k+ in Annual Recurring Revenue via proactive playbooks.',
+              stat: '+$118,500 ARR',
+              statSub: 'Preserved Revenue'
             }
           : {
-              tagline: 'Zero-Leakage Cohort Feature Store & Classification Threshold Calibration (p=0.35)',
-              summary: 'Escaped the naive 72.6% accuracy trap (0% recall) by calibrating decision threshold at p=0.35 to achieve 74% recall. Audited strict cutoff timestamp boundaries to eliminate lookahead feature leakage.',
-              stat: '74% Recall @ p=0.35 vs 0% Naive',
-              statSub: 'Model Calibration'
+              summary: 'Calibrated classification threshold at p=0.35 to escape the 0% recall accuracy trap, achieving 74% recall with zero lookahead leakage.',
+              stat: '74% Recall @ p=0.35',
+              statSub: 'Threshold Tuning'
             };
 
       case 'ab-testing-product-analytics':
         return perspective === 'commercial'
           ? {
-              tagline: 'Averted a Fatal 100% Rollout Disaster by Diagnosing Mobile Checkout Abandonment',
-              summary: 'Prevented leadership from shipping a flawed redesign that had a reported +13% lift. Discovered that mobile checkouts collapsed by -31pp, delivering a CPO memorandum recommending a desktop-only rollout.',
-              stat: 'Averted 50% Mobile Collapse',
-              statSub: 'Executive Rollout Memo'
+              summary: 'Uncovered a severe -31pp mobile checkout drop-off hiding behind a headline +13% lift, halting a high-risk 100% rollout.',
+              stat: 'Averted Rollout Loss',
+              statSub: 'CPO Decision Memo'
             }
           : {
-              tagline: 'Two-Proportion Z-Testing, Simpson’s Paradox Segment Audit & Novelty Decay Check',
-              summary: 'Conducted rigorous statistical diagnostics: Sample Ratio Mismatch (SRM) chi-square test, Wald 95% confidence intervals, and longitudinal novelty decay showing week-1 lift (+18%) fading to +8% in week-2.',
-              stat: 'Z = 5.46 · p = 0.015 Audit',
-              statSub: 'Statistical Rigor'
+              summary: 'Statistical audit across 50,000 visitors: Sample Ratio Mismatch (SRM), Wald 95% confidence intervals, and longitudinal novelty decay.',
+              stat: 'Z = 5.46 · p = 0.015',
+              statSub: 'Statistical Audit'
             };
 
       case 'demand-forecasting-ml':
         return perspective === 'commercial'
           ? {
-              tagline: 'Minimizing High-Velocity Stockouts and Reducing Inventory Holding Costs by 14%',
-              summary: 'Optimized purchasing replenishment across 40,000 customer orders and 14 categories. Reduced forecasting error by 22.3%, dampening artificial promotional surges and preventing warehouse inventory glut.',
-              stat: '+22.3% Better than Naive',
-              statSub: 'Stockout Prevention'
+              summary: 'Reduced demand forecast error by 22.3% across 14 categories, preventing costly stockouts on high-velocity items and cutting holding costs.',
+              stat: '+22.3% Accuracy',
+              statSub: 'Inventory Optimization'
             }
           : {
-              tagline: 'Rolling-Origin TimeSeriesSplit Cross-Validation with Outlier-Resistant Huber Regression',
-              summary: 'Forward-chaining expanding window cross-validation preventing future lookahead bias. Robust Huber loss dynamically damps extreme promotional spikes, achieving 19.20% WMAPE and 60.77 RMSE.',
-              stat: '19.20% WMAPE · Huber Regressor',
-              statSub: 'TimeSeriesSplit Validation'
+              summary: 'Expanding-window TimeSeriesSplit CV with robust Huber loss to dynamically damp post-promotional demand spikes without leakage.',
+              stat: '19.20% WMAPE',
+              statSub: 'Huber Regressor'
             };
 
       case 'end-to-end-data-pipeline':
         return perspective === 'commercial'
           ? {
-              tagline: 'Single Source of Truth for Subscriptions, Orders & Telemetry Across 1.15M+ Records',
-              summary: 'Consolidated transactional commerce, SaaS billing, and web telemetry into a unified Kimball star schema. Eliminated conflicting executive revenue metrics between Finance, Product, and Operations.',
-              stat: 'Single Source of Truth',
-              statSub: 'Executive Alignment'
+              summary: 'Unified transactional commerce, subscriptions, and clickstreams into a single source of truth across 1.15M+ records, ending metric disputes.',
+              stat: '1.15M+ Records',
+              statSub: 'Single Source of Truth'
             }
           : {
-              tagline: 'Airflow 3 Orchestration, Kimball Star Schema, SCD Type II & 103 Passing dbt Tests',
-              summary: 'Dual-mode ingestion engine extracting from Neon PostgreSQL & Parquet lakehouse with sub-minute incremental CDC. Enforces 103 strict dbt schema tests with SCD Type II historical dimension tracking.',
-              stat: '103 / 103 dbt Tests Passing',
-              statSub: 'Pipeline Integrity'
+              summary: 'Airflow 3 orchestration with incremental CDC into a Kimball star schema, featuring SCD Type II history and 103 passing dbt tests.',
+              stat: '103 / 103 Tests Passing',
+              statSub: 'Pipeline Contracts'
             };
 
       case 'sql-product-analytics':
         return perspective === 'commercial'
           ? {
-              tagline: 'Deconstructing B2C In-Session GMV Loss vs B2B Multi-Month Net MRR Expansion',
-              summary: 'Showed founders that B2C and B2B have inverted unit economics: saving 5% of high-value abandoned carts yields 3x the revenue of saving low-value carts, while B2B revenue is won through year-2 expansion.',
-              stat: '65% Lost GMV in Top Carts',
+              summary: 'Deconstructed contrasting unit economics: B2C high-value cart abandonment (65% of lost GMV) vs B2B year-2 net MRR expansion.',
+              stat: '65% Lost GMV in Carts',
               statSub: 'Unit Economics'
             }
           : {
-              tagline: 'Comparative Dual-Schema Window Analytics: Sessionization vs 12-Month Cohort NRR',
-              summary: 'Paired benchmark of 10 queries across two PostgreSQL schemas (ecom vs saas), contrasting 5-step minute-level session funnels against 14/30/60-day enterprise trial activation horizons.',
-              stat: '2-Day vs 417-Day Velocity',
-              statSub: 'Comparative Analytics'
+              summary: 'Dual-schema PostgreSQL comparative benchmark contrasting 5-step in-session checkouts against 12-month cohort net retention metrics.',
+              stat: '2-Day vs 417-Day',
+              statSub: 'Activation Horizons'
             };
 
       default:
         return {
-          tagline: project.tagline,
           summary: project.shortSummary,
           stat: project.breakthroughStat.value,
           statSub: project.breakthroughStat.label
@@ -121,10 +108,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
         return (
           <div className="mini-viz-container">
             <div className="viz-label-row">
-              <span style={{ color: '#fbbf24' }}>
-                {perspective === 'commercial' ? 'Revenue Concentration (Top 40% Spenders)' : 'Window Decile Spend Partitioning'}
-              </span>
-              <span style={{ fontFamily: 'var(--font-mono)' }}>88% of Total GMV</span>
+              <span style={{ color: '#fbbf24' }}>Whale Spend Concentration</span>
+              <span style={{ fontFamily: 'var(--font-mono)' }}>Top 40% Users → 88% Rev</span>
             </div>
             <div className="viz-bar-track">
               <div className="viz-bar-fill-gold" style={{ width: '88%' }}></div>
@@ -137,10 +122,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
         return (
           <div className="mini-viz-container">
             <div className="viz-label-row">
-              <span style={{ color: '#fbbf24' }}>
-                {perspective === 'commercial' ? 'ARR Rescued by CS Interventions' : 'Recall at Calibrated Threshold p=0.35'}
-              </span>
-              <span style={{ fontFamily: 'var(--font-mono)' }}>$118.5k Saved (74% Recall)</span>
+              <span style={{ color: '#fbbf24' }}>Model Recall @ p=0.35</span>
+              <span style={{ fontFamily: 'var(--font-mono)' }}>74% Recall ($118.5k Saved)</span>
             </div>
             <div className="viz-bar-track">
               <div className="viz-bar-fill-gold" style={{ width: '74%' }}></div>
@@ -153,10 +136,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
         return (
           <div className="mini-viz-container">
             <div className="viz-label-row">
-              <span style={{ color: '#2dd4bf' }}>
-                {perspective === 'commercial' ? 'Conversion Gap: Mobile Deficit' : 'Platform Segmentation (Simpson’s Paradox)'}
-              </span>
-              <span style={{ fontFamily: 'var(--font-mono)', color: '#f87171' }}>Mobile -31.0pp Deficit</span>
+              <span style={{ color: '#2dd4bf' }}>Step 3→4 Conversion: Mobile vs Desktop</span>
+              <span style={{ fontFamily: 'var(--font-mono)', color: '#f87171' }}>Mobile -31pp Deficit</span>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '4px' }}>
               <div>
@@ -175,10 +156,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
         return (
           <div className="mini-viz-container">
             <div className="viz-label-row">
-              <span style={{ color: '#fbbf24' }}>
-                {perspective === 'commercial' ? 'Stockout Reduction Accuracy' : 'Huber Regressor WMAPE Improvement'}
-              </span>
-              <span style={{ fontFamily: 'var(--font-mono)' }}>19.2% WMAPE (-22.3% error)</span>
+              <span style={{ color: '#fbbf24' }}>Huber vs Naive Error Reduction</span>
+              <span style={{ fontFamily: 'var(--font-mono)' }}>19.2% WMAPE (+22.3% gain)</span>
             </div>
             <div className="viz-bar-track">
               <div className="viz-bar-fill-gold" style={{ width: '77.7%' }}></div>
@@ -191,9 +170,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
         return (
           <div className="mini-viz-container">
             <div className="viz-label-row">
-              <span style={{ color: '#2dd4bf' }}>
-                {perspective === 'commercial' ? 'Data Reliability & Metrics Trust' : 'dbt Schema Contracts & SCD Type II'}
-              </span>
+              <span style={{ color: '#2dd4bf' }}>dbt Schema Contract Health</span>
               <span style={{ fontFamily: 'var(--font-mono)' }}>103 / 103 Passing (100%)</span>
             </div>
             <div className="viz-bar-track">
@@ -206,9 +183,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
         return (
           <div className="mini-viz-container">
             <div className="viz-label-row">
-              <span style={{ color: '#fbbf24' }}>
-                {perspective === 'commercial' ? 'Activation Horizon (B2C vs B2B)' : 'Windowed Time-to-Event Analysis'}
-              </span>
+              <span style={{ color: '#fbbf24' }}>Activation Horizons</span>
               <span style={{ fontFamily: 'var(--font-mono)' }}>2-Day (B2C) vs 417-Day (B2B)</span>
             </div>
             <div className="viz-bar-track">
@@ -223,10 +198,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
     }
   };
 
+  // Only take top 3-4 primary tech chips to reduce clutter
+  const visibleTech = project.techStack.slice(0, 4);
+
   return (
-    <div className={`bento-card ${spanClass}`}>
+    <div className={`bento-card ${spanClass}`} style={{ padding: '24px' }}>
       <div>
-        <div className="card-top-row">
+        <div className="card-top-row" style={{ marginBottom: '12px' }}>
           <span className="badge badge-gold">
             {project.domainLabel}
           </span>
@@ -235,37 +213,39 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"
-            title="Inspect Source on GitHub"
+            title="GitHub"
             onClick={(e) => e.stopPropagation()}
           >
             <GithubIcon size={18} />
           </a>
         </div>
 
-        <h3 className="card-title">{project.title}</h3>
-        <p className="card-tagline" style={{ color: perspective === 'commercial' ? '#fbbf24' : '#2dd4bf' }}>
-          {dynamicContent.tagline}
+        <h3 className="card-title" style={{ fontSize: '1.25rem', marginBottom: '8px' }}>
+          {project.title}
+        </h3>
+        
+        <p className="card-summary" style={{ marginBottom: '16px', fontSize: '0.875rem', lineHeight: '1.5' }}>
+          {dynamicContent.summary}
         </p>
-        <p className="card-summary">{dynamicContent.summary}</p>
 
         {renderMiniVisualizer()}
       </div>
 
       <div>
-        <div className="tech-chips-row">
-          {project.techStack.map((tech, i) => (
+        <div className="tech-chips-row" style={{ marginBottom: '16px' }}>
+          {visibleTech.map((tech, i) => (
             <span key={i} className="tech-pill">{tech}</span>
           ))}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '14px', borderTop: '1px solid var(--border-subtle)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            {perspective === 'commercial' ? <TrendingUp size={16} color="#f59e0b" /> : <Cpu size={16} color="#14b8a6" />}
+            {perspective === 'commercial' ? <TrendingUp size={15} color="#f59e0b" /> : <Cpu size={15} color="#14b8a6" />}
             <div>
-              <span style={{ fontSize: '0.825rem', fontWeight: 700, color: 'var(--text-main)', display: 'block' }}>
+              <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-main)', display: 'block' }}>
                 {dynamicContent.stat}
               </span>
-              <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)' }}>
+              <span style={{ fontSize: '0.675rem', color: 'var(--text-dim)' }}>
                 {dynamicContent.statSub}
               </span>
             </div>
@@ -275,7 +255,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, perspective, 
             onClick={() => onOpenModal(project)}
             className="btn btn-outline btn-sm"
           >
-            <span>Detailed Audit</span>
+            <span>Case Study</span>
             <ArrowUpRight size={14} />
           </button>
         </div>
